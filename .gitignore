@@ -1,2 +1,4 @@
 nifi_files/*
 nifi_config/*
+logs/
+*/__pycache__/
