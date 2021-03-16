@@ -8,5 +8,14 @@ nifi:
 airflow:
 	docker-compose -f airflow-compose.yml up -d
 
+kibana:
+	docker-compose -f kibana-compose.yml up -d
+
+elastic:
+	docker-compose -f kibana-compose.yml up -d
+
+stop-all:
+	docker stop $(docker ps -q)
+
 clean:
 	-rm nifi/nifi_files/*
