@@ -2,6 +2,10 @@ SHELL := /bin/bash
 .PHONY: clean nifi
 
 
+setup:
+	mkdir logs nifi_files nifi_config pgadmin postgres
+	sudo chmod -R 777 logs nifi_files nifi_config pgadmin postgres 
+
 nifi:
 	docker-compose -f nifi-compose.yml up -d
 
