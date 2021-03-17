@@ -5,8 +5,11 @@ SHELL := /bin/bash
 nifi:
 	docker-compose -f nifi-compose.yml up -d
 
-airflow:
+airflow: pg-admin
 	docker-compose -f airflow-compose.yml up -d
+
+pg-admin:
+	docker-compose -f pgadmin-compose.yml up -d
 
 kibana:
 	docker-compose -f kibana-compose.yml up -d

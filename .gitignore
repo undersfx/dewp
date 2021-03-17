@@ -2,3 +2,5 @@ nifi_files/*
 nifi_config/*
 logs/
 */__pycache__/
+postgres/
+pgadmin/
