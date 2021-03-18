@@ -7,3 +7,5 @@ pgadmin/
 .venv/
 code_examples/*.csv
 code_examples/*.json
+dags/*.csv
+dags/*.json
