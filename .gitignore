@@ -1,5 +1,5 @@
-nifi_files/*
-nifi_config/*
+nifi_files/
+nifi_config/*.jar
 logs/
 */__pycache__/
 postgres/
