@@ -10,7 +10,7 @@ def csv_names_to_json():
     df = pd.read_csv('dags/data.csv')
     for _, r in df.iterrows():
         print(r['name'])
-    df.to_json('from_airflow.json', orient='records')
+    df.to_json('logs/from_airflow.json', orient='records')
 
 default_args = {
     'owner': 'Thiago Rodrigues',
@@ -21,7 +21,7 @@ default_args = {
 
 with DAG('my_csv_dag',
         default_args=default_args,
-        schedule_interval=dt.timedelta(minutes=5)
+        schedule_interval=dt.timedelta(minutes=10)
         ) as dag:
     print_starting = BashOperator(
             task_id='starting',
