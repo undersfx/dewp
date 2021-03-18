@@ -21,4 +21,4 @@ stop-all:
 	docker stop $(docker ps -q)
 
 clean:
-	-rm nifi/nifi_files/*
+	-rm nifi_files/*
