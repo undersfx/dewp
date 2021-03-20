@@ -8,6 +8,7 @@ faker = "*"
 ipython = "*"
 pandas = "*"
 apache-airflow = {extras = ["postgres"], version = "*"}
+elasticsearch = "*"
 
 [dev-packages]
 
