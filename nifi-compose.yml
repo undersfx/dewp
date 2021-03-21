@@ -5,6 +5,12 @@ services:
     container_name: nifi
     ports:
       - 9300:8080
+    networks:
+      - etl_network
     volumes:
       - ./nifi_files:/opt/nifi/nifi-current/nifi_files
       - ./nifi_config:/opt/nifi/nifi-current/nifi_config
+
+networks:
+  etl_network:
+    external: true
