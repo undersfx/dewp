@@ -9,7 +9,7 @@ services:
     ports: 
       - "5432:5432"
     networks:
-      - postgres
+      - etl_network
 
   scheduler:
     image: apache/airflow
@@ -26,7 +26,9 @@ services:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
     networks:
-      - postgres
+      - etl_network
+    links:
+      - 'postgres:postgres_database'
 
   webserver:
     image: apache/airflow
@@ -45,7 +47,9 @@ services:
     ports:
       - "8080:8080"
     networks:
-      - postgres
+      - etl_network
+    links:
+      - 'postgres:postgres_database'
 
   pgadmin:
     container_name: pgadmin_container
@@ -61,9 +65,9 @@ services:
     ports:
       - "${PGADMIN_PORT:-5050}:80"
     networks:
-      - postgres
+      - etl_network
     restart: unless-stopped
     
 networks:
-  postgres:
-    driver: bridge
+  etl_network:
+    external: true

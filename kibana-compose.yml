@@ -10,7 +10,16 @@ services:
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
     ports:
       - "9200:9200"
+    networks:
+      - etl_network
+
   kibana:
     image: docker.elastic.co/kibana/kibana:7.11.2
     ports:
       - "5601:5601"
+    networks:
+      - etl_network
+
+networks:
+  etl_network:
+    external: true
