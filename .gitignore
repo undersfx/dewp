@@ -1,11 +1,18 @@
+# Python Files
+*/__pycache__/
+.venv/
+
+# Project Files
 nifi_files/
 nifi_config/*.jar
-logs/
-*/__pycache__/
 postgres/
 pgadmin/
-.venv/
+logs/
+
+# Data Sets
 code_examples/*/*.csv
 code_examples/*/*.json
 dags/*.csv
 dags/*.json
+!scooter.csv
+!geocodestreet.csv
