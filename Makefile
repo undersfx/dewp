@@ -20,6 +20,10 @@ kibana:
 
 elastic: kibana
 
+
+compose-all: airflow kibana nifi
+
+
 sample-data:
 	@echo "Generating Sample Data"
 	python code_examples/chapter3/inserting_data_into_elasticsearch.py
