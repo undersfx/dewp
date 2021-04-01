@@ -9,7 +9,7 @@ import pandas as pd
 
 
 default_args = {
-        'owner': 'paulcrickard',
+        'owner': 'Thiago Rodrigues',
         'start_date': dt.datetime(2021, 4, 1),
         'retries': 1,
         'retry_delay': dt.timedelta(minutes=5),

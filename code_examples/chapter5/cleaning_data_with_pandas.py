@@ -25,7 +25,7 @@ df.dropna(subset=['duration'], inplace=True)
 
 # Fill null values for 'start_location_name' and 'end_location_name'
 df['start_location_name'].fillna('Start St.', inplace=True)
-df['end_location_name'].fillna('Start St.', inplace=True)
+df['end_location_name'].fillna('End St.', inplace=True)
 
 
 # String methods can be called in Series with Series.str
