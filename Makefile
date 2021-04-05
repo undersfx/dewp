@@ -21,16 +21,16 @@ kibana:
 elastic: kibana
 
 
-compose-all: airflow kibana nifi
+start-all: airflow kibana nifi
 
+
+stop-all:
+	docker stop $(docker ps -q)
 
 sample-data:
 	@echo "Generating Sample Data"
 	python code_examples/chapter3/inserting_data_into_elasticsearch.py
 	python code_examples/chapter3/inserting_data_into_postgres.py
-
-stop-all:
-	docker stop $(docker ps -q)
 
 clean:
 	-rm nifi_files/*
