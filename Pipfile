@@ -9,6 +9,9 @@ ipython = "*"
 pandas = "*"
 apache-airflow = {extras = ["postgres"], version = "*"}
 elasticsearch = "*"
+great-expectations = "*"
+jupyter = "*"
+sqlalchemy = "< 1.4.0"  # Great Expectations incampatible with >= 1.4.0
 
 [dev-packages]
 
