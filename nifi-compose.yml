@@ -10,6 +10,7 @@ services:
     volumes:
       - ./nifi_files:/opt/nifi/nifi-current/nifi_files
       - ./nifi_config:/opt/nifi/nifi-current/nifi_config
+      - ./scripts:/opt/airflow/scripts
 
 networks:
   etl_network:
