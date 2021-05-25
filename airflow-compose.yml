@@ -16,7 +16,7 @@ services:
     command: scheduler
     deploy:
       restart_policy:
-        condition: on-failure
+        condition: none
     depends_on:
       - webserver
       - postgres
@@ -36,7 +36,7 @@ services:
     entrypoint: ./scripts/entrypoint.sh
     deploy:
       restart_policy:
-        condition: on-failure
+        condition: none
     depends_on:
       - postgres
     env_file:
