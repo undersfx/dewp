@@ -25,7 +25,7 @@ start-all: airflow kibana nifi
 
 
 stop-all:
-	docker stop $(docker ps -q)
+	docker stop $$(docker ps -q);
 
 sample-data:
 	@echo "Generating Sample Data"
